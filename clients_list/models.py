@@ -10,8 +10,8 @@ class clientList(models.Model):
     precio = models.DecimalField(max_digits=50, decimal_places=0, blank=True, null=True)
     detalle = models.CharField(db_column='Detalle', max_length=50, blank=True, null=True)  # Field name made lowercase.
     email = models.CharField(db_column='Email', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    apodo = models.CharField(db_column='Apodo', max_length=40)
+  
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'clients_list'

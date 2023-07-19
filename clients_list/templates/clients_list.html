@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+
+    <table>
+        <tr>
+            <th>Nombre y Apellido</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Último Lavado</th>
+            <th>Precio</th>
+            <th>Detalle</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+        {% for c in clients %}
+        <tr>
+            <td>{{ c.nombre_apellido }}</td>
+            <td>{{ c.direccion }}</td>
+            <td>{{ c.telefono }}</td>
+            <td>{{ c.ultimo_lavado }}</td>
+            <td>{{ c.precio }}</td>
+            <td>{{ c.detalle }}</td>
+            <td>{{ c.email }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
